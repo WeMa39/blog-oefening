@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | Mind Your Life</title>
+  <meta name="description" content="Blogberichten van Mind Your Life over mindfulness, stress en omgaan met ongemak.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="canonical" href="https://www.mindyourlife.coach/blog.html">
+  <meta property="og:title" content="Blog | Mind Your Life">
+  <meta property="og:description" content="Blogberichten over mindfulness, stress en omgaan met ongemak.">
+  <meta property="og:image" content="https://www.mindyourlife.coach/img/blog-mindfulness.jpg">
+  <meta property="og:url" content="https://www.mindyourlife.coach/blog.html">
+  <meta property="og:type" content="website">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Mind <span>your</span> Life</a>
+      <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="voor-wie.html">Voor wie?</a></li>
+          <li><a href="werkwijze.html">Werkwijze</a></li>
+          <li><a href="over-mij.html">Over mij</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html" aria-current="page">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <div class="wrap">
+        <span class="eyebrow">Blog</span>
+        <h1>About mindful living</h1>
+      </div>
+    </section>
+
+    <section class="section--tight" style="padding-top:0; padding-bottom:96px">
+      <div class="wrap">
+        <div class="posts">
+          <article class="post">
+            <div class="post__img"><img src="img/blog-ongemak.jpg" alt="Silhouet van een man die naar de zonsondergang boven het water kijkt"></div>
+            <div class="post__body">
+              <div class="post__meta">13 november 2025 &middot; 3 min lezen</div>
+              <h2>Zitten met je ongemak</h2>
+              <p>Leren zitten met je ongemak: de sleutel tot verandering.</p>
+            </div>
+          </article>
+          <article class="post">
+            <div class="post__img"><img src="img/blog-mindfulness.jpg" alt="Profiel van een vrouw met een wolk van rook rond het hoofd, op een groene achtergrond"></div>
+            <div class="post__body">
+              <div class="post__meta">23 juli 2024 &middot; 4 min lezen</div>
+              <h2>Mindfulness als eerste stap in stressmanagement</h2>
+              <p>Hoe starten met mindfulness?</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Mind Your Life</div>
+          <div class="footer-tag">about mindful living&hellip;</div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Koningsveldstraat 18<br>3570 Alken</li>
+            <li><a href="mailto:katleen_degruyter@hotmail.com">katleen_degruyter@hotmail.com</a></li>
+            <li><a href="tel:+32499170094">0499 17 00 94</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Pagina's</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="voor-wie.html">Voor wie?</a></li>
+            <li><a href="werkwijze.html">Werkwijze</a></li>
+            <li><a href="over-mij.html">Over mij</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; <span id="year">2026</span> Mind Your Life</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('nav');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open);
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

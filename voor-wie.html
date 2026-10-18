@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voor wie? | Mind Your Life</title>
+  <meta name="description" content="Herken je jezelf in deze uitspraken? Dan heb je misschien last van overspanning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="canonical" href="https://www.mindyourlife.coach/voor-wie.html">
+  <meta property="og:title" content="Voor wie? | Mind Your Life">
+  <meta property="og:description" content="Herken je jezelf in deze uitspraken? Dan heb je misschien last van overspanning.">
+  <meta property="og:image" content="https://www.mindyourlife.coach/img/praktijk.jpg">
+  <meta property="og:url" content="https://www.mindyourlife.coach/voor-wie.html">
+  <meta property="og:type" content="website">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Mind <span>your</span> Life</a>
+      <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="voor-wie.html" aria-current="page">Voor wie?</a></li>
+          <li><a href="werkwijze.html">Werkwijze</a></li>
+          <li><a href="over-mij.html">Over mij</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <div class="wrap">
+        <span class="eyebrow">Voor wie?</span>
+        <h1>Herken je jezelf?</h1>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="wrap">
+        <ul class="quotes">
+          <li>&ldquo;Ik heb precies nooit meer tijd voor mezelf.&rdquo;</li>
+          <li>&ldquo;Echt ontspannen, is moeilijk voor mij.&rdquo;</li>
+          <li>&ldquo;Ik voel me vaak rusteloos.&rdquo;</li>
+          <li>&ldquo;Ik voel me vaak moe&hellip;&rdquo;</li>
+          <li>&ldquo;Mijn hoofd zit altijd vol.&rdquo;</li>
+          <li>&ldquo;Ik zet anderenmans behoeften vaak voor mijn eigen noden.&rdquo;</li>
+          <li>&ldquo;Ik wil terug meer kunnen genieten.&rdquo;</li>
+          <li>&ldquo;Lang concentreren, lukt niet meer goed.&rdquo;</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="prose">
+          <p>Herken je jezelf in bovenstaande uitspraken, dan is de kans groot dat je last hebt van overspanning. Deze toestand kan ontstaan wanneer stress en rust niet meer in evenwicht zijn. Je lichaam kan niet meer voldoende herstellen waardoor er na een tijdje allerlei klachten ontstaan.</p>
+          <p>Deze kunnen gaan van lichamelijke klachten tot psychische. Om het probleem grondig aan te pakken, is het belangrijk dat er aandacht besteed wordt aan beide.</p>
+          <div class="btn-row">
+            <a class="btn" href="werkwijze.html">Bekijk de werkwijze</a>
+            <a class="btn btn--ghost" href="contact.html">Contact opnemen</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Mind Your Life</div>
+          <div class="footer-tag">about mindful living&hellip;</div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Koningsveldstraat 18<br>3570 Alken</li>
+            <li><a href="mailto:katleen_degruyter@hotmail.com">katleen_degruyter@hotmail.com</a></li>
+            <li><a href="tel:+32499170094">0499 17 00 94</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Pagina's</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="voor-wie.html">Voor wie?</a></li>
+            <li><a href="werkwijze.html">Werkwijze</a></li>
+            <li><a href="over-mij.html">Over mij</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; <span id="year">2026</span> Mind Your Life</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('nav');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open);
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

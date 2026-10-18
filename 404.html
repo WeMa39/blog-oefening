@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Pagina verhuisd | Mind Your Life</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    // Oude Wix-links doorsturen naar de juiste nieuwe pagina
+    (function () {
+      var p = decodeURIComponent(location.pathname).toLowerCase();
+      var doel = "/";
+      if (p.indexOf("over") > -1) doel = "/over-mij.html";
+      else if (p.indexOf("contact") > -1) doel = "/contact.html";
+      else if (p.indexOf("blog") > -1 || p.indexOf("post") > -1) doel = "/blog.html";
+      else if (p.indexOf("werkwijze") > -1 || p.indexOf("aanbod") > -1) doel = "/werkwijze.html";
+      else if (p.indexOf("voor-wie") > -1 || p.indexOf("voorwie") > -1) doel = "/voor-wie.html";
+      location.replace(doel);
+    })();
+  </script>
+</head>
+<body>
+  <main style="max-width:36rem;margin:4rem auto;padding:0 1rem;text-align:center">
+    <h1>Deze pagina is verhuisd</h1>
+    <p>Je wordt doorgestuurd naar de nieuwe website.</p>
+    <p><a href="/">Ga naar de startpagina</a></p>
+  </main>
+</body>
+</html>
