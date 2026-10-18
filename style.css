@@ -512,10 +512,33 @@ p { margin: 0 0 1.2em; }
   background: #2E362C;
 }
 
+.blog-kaartje.met-foto {
+  display: grid;
+  grid-template-columns: 2fr 3fr;   /* foto 2 delen breed, tekst 3 delen */
+  gap: 2rem;
+  max-width: 64rem;
+  align-items: start;
+}
+
 .blog-foto {
   width: 100%;
-  max-height: 22rem;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 12px;
-  margin-bottom: 1.25rem;
+}
+
+.blog-inhoud > :first-child {
+  margin-top: 0;
+}
+
+/* Op een gsm is er geen plaats voor twee kolommen: foto boven, tekst eronder */
+@media (max-width: 700px) {
+ 
+.blog-kaartje.met-foto {
+  grid-template-columns: 1fr;
+}
+  
+.blog-foto {
+  aspect-ratio: 16 / 9;
+}
 }

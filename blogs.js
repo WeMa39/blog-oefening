@@ -7,13 +7,13 @@
 //   2. We knippen die tekst in rijen en kolommen.
 //   3. We sorteren de blogs: de nieuwste eerst.
 //   4. Van elke rij maken we een blogkaartje op de pagina.
- 
+
 // De publicatielink van je Google-spreadsheet (stap 2 van vandaag).
 const CSV_LINK = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRx_-6CvMkk83HM6s26m9OxM1KVkyxnjhACbuZSZVn3VcIyB6nHBlt6utYIs4tv-x8YdDphbbTIp56G/pub?gid=0&single=true&output=csv";
- 
+
 // De plek in blog.html waar de blogs moeten verschijnen.
 const plek = document.getElementById("blogs");
- 
+
 // ------------------------------------------------------------
 // Stap 1: het CSV-bestand ophalen
 // ------------------------------------------------------------
@@ -31,7 +31,7 @@ fetch(CSV_LINK)
   .catch(function () {
     plek.textContent = "De blogs konden niet geladen worden. Probeer het later opnieuw.";
   });
- 
+
 // ------------------------------------------------------------
 // Stap 2: CSV-tekst omzetten naar rijen en kolommen
 // ------------------------------------------------------------
@@ -45,10 +45,10 @@ function leesCsv(tekst) {
   let rij = [];
   let cel = "";
   let binnenQuotes = false;
- 
+
   for (let i = 0; i < tekst.length; i++) {
     const teken = tekst[i];
- 
+
     if (binnenQuotes) {
       if (teken === '"' && tekst[i + 1] === '"') {
         cel += '"';           // "" betekent een gewoon aanhalingsteken
@@ -81,7 +81,7 @@ function leesCsv(tekst) {
   }
   return rijen;
 }
- 
+
 // ------------------------------------------------------------
 // Stap 3: rijen omzetten naar blogs, de nieuwste eerst
 // ------------------------------------------------------------
@@ -95,13 +95,13 @@ function maakBlogs(rijen) {
   const kolomDatum = kolomnamen.indexOf("datum");
   const kolomTekst = kolomnamen.indexOf("tekst");
   const kolomAfbeelding = kolomnamen.indexOf("afbeelding"); // -1 als die kolom er niet is
- 
+
   const blogs = [];
   for (let i = 1; i < rijen.length; i++) {
     const rij = rijen[i];
     const titel = (rij[kolomTitel] || "").trim();
     if (titel === "") continue; // lege rijen overslaan
- 
+
     blogs.push({
       titel: titel,
       datum: leesDatum(rij[kolomDatum]),
@@ -109,14 +109,14 @@ function maakBlogs(rijen) {
       afbeelding: afbeeldingAdres(rij[kolomAfbeelding])
     });
   }
- 
+
   // Sorteren: de blog met de grootste (= recentste) datum eerst.
   blogs.sort(function (a, b) {
     return b.datum - a.datum;
   });
   return blogs;
 }
- 
+
 // Zet "23/07/2024" om naar een echte datum waarmee JavaScript kan rekenen.
 function leesDatum(tekst) {
   const delen = (tekst || "").trim().split("/");
@@ -126,7 +126,7 @@ function leesDatum(tekst) {
   const jaar = Number(delen[2]);
   return new Date(jaar, maand, dag);
 }
- 
+
 // Maakt van een deellink van Google Drive een adres dat een browser als
 // afbeelding kan tonen. Een deellink ziet er zo uit:
 //   https://drive.google.com/file/d/1AbC...xyz/view?usp=sharing
@@ -139,16 +139,16 @@ function afbeeldingAdres(link) {
   if (link === "") return "";
   const gevonden = link.match(/\/d\/([\w-]+)/) || link.match(/[?&]id=([\w-]+)/);
   if (link.indexOf("drive.google.com") > -1 && gevonden) {
-    return "https://drive.google.com/thumbnail?id=" + gevonden[1] + "&sz=w1200";
+    return "https://lh3.googleusercontent.com/d/" + gevonden[1] + "=w1200";
   }
   return link;
 }
- 
+
 // Zet een datum om naar "23 juli 2024".
 function mooieDatum(datum) {
   return datum.toLocaleDateString("nl-BE", { day: "numeric", month: "long", year: "numeric" });
 }
- 
+
 // ------------------------------------------------------------
 // Stap 4: van elke blog een kaartje maken
 // ------------------------------------------------------------
@@ -157,57 +157,64 @@ function mooieDatum(datum) {
 // spreadsheet nooit per ongeluk iets op de site belanden dat de pagina breekt.
 function toonBlogs(blogs) {
   plek.textContent = ""; // de tekst "Blogs worden geladen..." weghalen
- 
+
   if (blogs.length === 0) {
     plek.textContent = "Er staan nog geen blogs online.";
     return;
   }
- 
+
   blogs.forEach(function (blog) {
     const kaartje = document.createElement("article");
     kaartje.className = "blog-kaartje";
- 
-    // Een afbeelding bovenaan, alleen als er een link in de spreadsheet staat.
+
+    // Een afbeelding links, alleen als er een link in de spreadsheet staat.
+    // De klasse "met-foto" zorgt in style.css voor twee kolommen.
     if (blog.afbeelding !== "") {
+      kaartje.classList.add("met-foto");
       const foto = document.createElement("img");
       foto.className = "blog-foto";
       foto.src = blog.afbeelding;
       foto.alt = blog.titel;
       kaartje.appendChild(foto);
     }
- 
+
+    // Alle tekst komt samen in één vak: de rechterkolom.
+    const inhoud = document.createElement("div");
+    inhoud.className = "blog-inhoud";
+    kaartje.appendChild(inhoud);
+
     const titel = document.createElement("h2");
     titel.textContent = blog.titel;
-    kaartje.appendChild(titel);
- 
+    inhoud.appendChild(titel);
+
     const datum = document.createElement("p");
     datum.className = "blog-datum";
     datum.textContent = mooieDatum(blog.datum);
-    kaartje.appendChild(datum);
- 
+    inhoud.appendChild(datum);
+
     // Elke regel uit de cel wordt een aparte alinea.
     const alineas = blog.tekst.split("\n").filter(function (regel) {
       return regel.trim() !== "";
     });
- 
+
     // We tonen meteen zoveel alinea's tot er minstens 250 tekens staan
     // (een korte inleiding), de rest verschijnt na "Lees verder".
     const rest = document.createElement("div");
     rest.hidden = true;
     let getoondeTekens = 0;
- 
+
     alineas.forEach(function (regel) {
       const p = document.createElement("p");
       p.textContent = regel;
       if (getoondeTekens < 250) {
-        kaartje.appendChild(p);
+        inhoud.appendChild(p);
         getoondeTekens += regel.length;
       } else {
         rest.appendChild(p);
       }
     });
-    kaartje.appendChild(rest);
- 
+    inhoud.appendChild(rest);
+
     if (rest.children.length > 0) {
       const knop = document.createElement("button");
       knop.className = "blog-knop";
@@ -216,9 +223,9 @@ function toonBlogs(blogs) {
         rest.hidden = !rest.hidden;
         knop.textContent = rest.hidden ? "Lees verder" : "Minder tonen";
       });
-      kaartje.appendChild(knop);
+      inhoud.appendChild(knop);
     }
- 
+
     plek.appendChild(kaartje);
   });
 }
