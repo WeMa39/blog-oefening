@@ -511,3 +511,11 @@ p { margin: 0 0 1.2em; }
 .blog-knop:hover {
   background: #2E362C;
 }
+
+.blog-foto {
+  width: 100%;
+  max-height: 22rem;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+}
