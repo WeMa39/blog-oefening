@@ -476,3 +476,38 @@ p { margin: 0 0 1.2em; }
   .quotes li { font-size: 1.15rem; border-radius: 18px; }
   .post__body { padding: 24px; }
 }
+
+
+.blog-kaartje {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 46rem;
+  box-shadow: 0 2px 12px rgba(46, 54, 44, 0.06);
+}
+
+.blog-kaartje h2 {
+  font-family: "Cormorant Garamond", serif;
+  margin: 0 0 0.25rem;
+}
+
+.blog-datum {
+  color: #7D9868;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.blog-knop {
+  background: #4E6744;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.blog-knop:hover {
+  background: #2E362C;
+}
