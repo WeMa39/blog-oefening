@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Groepslessen | Mind Your Life</title>
+  <meta name="description" content="Groepslessen mindfulness in Alken: leer vertragen, bewuster leven en je stress verminderen. Elke donderdag vanaf 11 februari om 20u00.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="canonical" href="https://www.mindyourlife.coach/groepslessen.html">
+  <meta property="og:title" content="Groepslessen | Mind Your Life">
+  <meta property="og:description" content="Groepslessen mindfulness: leer vertragen, bewuster leven en je stress verminderen.">
+  <meta property="og:image" content="https://www.mindyourlife.coach/img/praktijk.jpg">
+  <meta property="og:url" content="https://www.mindyourlife.coach/groepslessen.html">
+  <meta property="og:type" content="website">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Mind <span>your</span> Life</a>
+      <button class="nav-toggle" aria-label="Menu openen" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="voor-wie.html">Voor wie?</a></li>
+          <li><a href="werkwijze.html">Werkwijze</a></li>
+          <li><a href="groepslessen.html" aria-current="page">Groepslessen</a></li>
+          <li><a href="over-mij.html">Over mij</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="motto">
+      <p>Leer vertragen, leef bewuster.</p>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <span class="eyebrow">Groepslessen mindfulness</span>
+          <p>Beu om geleefd te worden, altijd maar te rennen van het ene naar het andere, in voortdurende gejaagdheid te zitten?</p>
+          <p>Dit is je kans om te leren vertragen, bewuster te leven en je stress te verminderen.</p>
+        </div>
+        <div class="split__media">
+          <p class="word" aria-hidden="true">RUST</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="wrap split split--reverse">
+        <div>
+          <span class="eyebrow">Praktisch</span>
+          <p><strong>Voor wie:</strong> iedereen vanaf 18 jaar</p>
+          <p><strong>Data en uren:</strong> elke donderdag vanaf 11 februari, om 20u00</p>
+          <p><strong>Plaats:</strong> Koningsveldstraat 18, 3570 Alken</p>
+          <p><strong>Prijs:</strong> &euro;299,-</p>
+          <p><strong>Inschrijven:</strong> via <a href="https://www.mindyourlife.coach">www.mindyourlife.coach</a></p>
+        </div>
+        <div class="split__media">
+          <p class="word" aria-hidden="true">SAMEN</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap cta">
+        <h2>Zin om mee te doen?</h2>
+        <div class="btn-row" style="justify-content:center">
+          <a class="btn" href="contact.html">Inschrijven</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Mind Your Life</div>
+          <div class="footer-tag">about mindful living&hellip;</div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Koningsveldstraat 18<br>3570 Alken</li>
+            <li><a href="mailto:katleen_degruyter@hotmail.com">katleen_degruyter@hotmail.com</a></li>
+            <li><a href="tel:+32499170094">0499 17 00 94</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Pagina's</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="voor-wie.html">Voor wie?</a></li>
+            <li><a href="werkwijze.html">Werkwijze</a></li>
+            <li><a href="groepslessen.html">Groepslessen</a></li>
+            <li><a href="over-mij.html">Over mij</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; <span id="year">2026</span> Mind Your Life</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('nav');
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open);
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
