@@ -542,3 +542,118 @@ p { margin: 0 0 1.2em; }
   aspect-ratio: 16 / 9;
 }
 }
+
+/* ---------- Homepage: belofte ---------- */
+
+.hero__title { margin-bottom: 24px; }
+.hero__promise {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+.hero__intro {
+  font-size: 1.08rem;
+  color: var(--muted);
+  max-width: 34em;
+  margin: 0 0 22px;
+}
+.theme-links { text-align: center; margin: 32px 0 0; color: var(--muted); font-size: 0.97rem; }
+.theme-links span { color: var(--sage); margin: 0 6px; }
+
+/* ---------- Instagram ---------- */
+
+.ig-link { display: inline-flex; align-items: center; gap: 8px; }
+.ig-cta { text-align: center; margin-top: 28px; }
+
+/* ---------- Themapagina's ---------- */
+
+.thema { max-width: 760px; margin: 0 auto; padding: 40px 24px 96px; }
+.crumbs { font-size: 0.85rem; color: var(--muted); margin-bottom: 28px; }
+.crumbs a { color: var(--muted); }
+.crumbs span { margin: 0 8px; }
+.thema h1 { margin-bottom: 0.5em; }
+.thema h2 { font-size: clamp(1.6rem, 3vw, 2rem); margin: 1.8em 0 0.5em; }
+.kort { background: var(--sage-light); border-radius: var(--radius); padding: 24px 28px; font-size: 1.12rem; }
+.kort .eyebrow { margin-bottom: 0.4rem; }
+.kort p { margin: 0; }
+.thema ul.lijst { padding-left: 1.2em; }
+.thema ul.lijst li { margin-bottom: 0.35em; }
+.vgl { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0.5em 0 1.2em; }
+.vak { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; }
+.vak h3 { font-family: var(--sans); font-size: 1.05rem; font-weight: 500; margin: 0 0 0.3em; }
+.vak p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.vak .nr { font-size: 0.8rem; font-weight: 500; color: var(--sage); }
+.pijlers { grid-template-columns: 1fr 1fr; }
+.stappen { list-style: none; padding: 0; counter-reset: stap; }
+.stappen li { counter-increment: stap; display: flex; gap: 14px; align-items: center; margin-bottom: 12px; }
+.stappen li::before { content: counter(stap); flex: 0 0 32px; height: 32px; border-radius: 50%; background: var(--sage-light); color: var(--sage-dark); display: grid; place-items: center; font-weight: 500; font-size: 0.9rem; }
+.klein { font-size: 0.92rem; color: var(--muted); }
+.audio { display: flex; gap: 20px; align-items: center; background: var(--sage-dark); color: #fff; border-radius: var(--radius); padding: 22px 26px; margin-top: 24px; }
+.audio__knop { flex: 0 0 60px; height: 60px; border-radius: 50%; background: #fff; display: grid; place-items: center; opacity: 0.85; }
+.audio__knop svg { width: 20px; height: 20px; fill: var(--sage-dark); margin-left: 3px; }
+.audio__titel { font-family: var(--serif); font-size: 1.5rem; line-height: 1.1; }
+.audio__sub { font-size: 0.88rem; color: #dfe3da; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0.6em 0 0; }
+.tags li { background: var(--blush); border-radius: 999px; padding: 4px 14px; font-size: 0.92rem; }
+.bloglink { display: flex; justify-content: space-between; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px; margin-top: 28px; text-decoration: none; color: var(--ink); }
+.bloglink small { display: block; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); }
+.bloglink strong { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+.auteur { display: flex; gap: 14px; align-items: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 18px 0; margin-top: 40px; }
+.auteur__k { flex: 0 0 48px; height: 48px; border-radius: 50%; background: var(--sage-light); color: var(--sage-dark); display: grid; place-items: center; font-family: var(--serif); font-size: 1.4rem; }
+.auteur b { font-weight: 500; display: block; }
+.auteur span { font-size: 0.88rem; color: var(--muted); }
+.hulp { background: var(--ink); color: #fff; border-radius: var(--radius); padding: 32px; margin-top: 32px; }
+.hulp h2 { color: #fff; margin: 0 0 0.4em; }
+.hulp p { color: #dfe3da; }
+.hulp .btn { background: #fff; color: var(--ink); }
+.hulp .btn--ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.6); }
+.lees-ook { margin-top: 36px; }
+.lees-ook .vgl a { text-decoration: none; color: var(--ink); font-family: var(--serif); font-size: 1.3rem; transition: transform 0.2s, box-shadow 0.2s; }
+.lees-ook .vgl a:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+@media (max-width: 600px) {
+  .vgl, .pijlers { grid-template-columns: 1fr; }
+  .audio { padding: 18px; }
+  .hulp { padding: 24px; }
+}
+
+/* ---------- Homepage: titel in de stijl van het logo ---------- */
+
+.hero__title {
+  position: relative;
+  font-size: clamp(2.6rem, 5.6vw, 4.4rem);
+  width: 6.4em;
+  max-width: 100%;
+  height: 3em;
+  margin: 0 0 28px clamp(8px, 2.5vw, 36px);
+  line-height: 1;
+}
+.hero__title span { position: absolute; display: block; white-space: nowrap; }
+.t-mind {
+  left: 0;
+  top: 0;
+  font-family: var(--serif);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: transparent;
+  -webkit-text-stroke: 1.4px var(--ink);
+}
+.t-your {
+  left: 6.4em;
+  top: 2.55em;
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 0.42em;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.t-life {
+  left: 1.77em;
+  top: 0.36em;
+  font-family: "Pinyon Script", var(--serif);
+  font-weight: 400;
+  font-size: 1.95em;
+  color: var(--ink);
+}
