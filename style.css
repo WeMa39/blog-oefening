@@ -682,3 +682,13 @@ p { margin: 0 0 1.2em; }
 .vs-kop--rust { fill: #4e6744; }
 .vs-sub { font-family: "Jost", sans-serif; font-size: 15px; font-weight: 300; fill: #626d5f; }
 @media (max-width: 900px) { .venster-grid { grid-template-columns: 1fr; gap: 28px; } .venster__fig { max-width: 520px; } }
+
+/* Homepagina: titel krijgt de ruimte, plaats onder de titel */
+.hero__title { margin-top: 12px; margin-bottom: 36px; }
+.hero__plaats { display: block; margin-bottom: 10px; }
+
+/* Homepagina: aanbod als labels, adres onder de knoppen */
+.hero__tags { list-style: none; padding: 0; margin: 4px 0 30px; display: flex; flex-wrap: wrap; gap: 8px; }
+.hero__tags li { background: var(--sage-light); color: var(--sage-dark); font-weight: 500; font-size: 0.95rem; letter-spacing: 0.01em; padding: 7px 15px; border-radius: 999px; }
+.hero__adres { display: flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 0.95rem; color: var(--muted); }
+.hero__adres svg { color: var(--sage); flex: none; }
