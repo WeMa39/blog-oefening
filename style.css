@@ -692,3 +692,9 @@ p { margin: 0 0 1.2em; }
 .hero__tags li { background: var(--sage-light); color: var(--sage-dark); font-weight: 500; font-size: 0.95rem; letter-spacing: 0.01em; padding: 7px 15px; border-radius: 999px; }
 .hero__adres { display: flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 0.95rem; color: var(--muted); }
 .hero__adres svg { color: var(--sage); flex: none; }
+
+/* Over mij: foto bovenaan naast de tekst */
+.about .split { align-items: start; }
+.about .split__media { position: sticky; top: 110px; }
+.page-intro + .about { padding-top: 24px; }
+@media (max-width: 900px) { .about .split__media { position: static; } }
