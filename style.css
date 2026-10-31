@@ -687,6 +687,11 @@ p { margin: 0 0 1.2em; }
 .hero__title { margin-top: 12px; margin-bottom: 36px; }
 .hero__plaats { display: block; margin-bottom: 10px; }
 
+/* Homepagina: titel als logo-afbeelding */
+.hero__title--img { width: auto; height: auto; margin-left: 0; }
+.hero__title--img img { display: block; width: 100%; max-width: 520px; height: auto; }
+@media (max-width: 600px) { .hero__title--img img { max-width: 100%; } }
+
 /* Homepagina: aanbod als labels, adres onder de knoppen */
 .hero__tags { list-style: none; padding: 0; margin: 4px 0 30px; display: flex; flex-wrap: wrap; gap: 8px; }
 .hero__tags li { background: var(--sage-light); color: var(--sage-dark); font-weight: 500; font-size: 0.95rem; letter-spacing: 0.01em; padding: 7px 15px; border-radius: 999px; }
@@ -698,3 +703,5 @@ p { margin: 0 0 1.2em; }
 .about .split__media { position: sticky; top: 110px; }
 .page-intro + .about { padding-top: 24px; }
 @media (max-width: 900px) { .about .split__media { position: static; } }
+.about__quote--foto { margin: 28px 0 0; }
+.about .btn-row { margin-top: 32px; }
