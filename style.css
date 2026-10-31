@@ -671,3 +671,14 @@ p { margin: 0 0 1.2em; }
 .vak--rust h3 { color: var(--sage-dark); }
 @media (max-width: 900px) { .traject { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 600px) { .traject, .venster { grid-template-columns: 1fr; } }
+
+/* Werkwijze: illustratie venster */
+.venster-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.venster-grid .venster { grid-template-columns: 1fr; gap: 12px; }
+.venster__fig { margin: 0; }
+.venster__svg { width: 100%; height: auto; display: block; }
+.venster__fig figcaption { margin-top: 12px; font-size: 0.92rem; color: var(--muted); text-align: center; font-style: italic; }
+.vs-kop { font-family: "Jost", sans-serif; font-size: 18px; font-weight: 500; fill: #2e362c; }
+.vs-kop--rust { fill: #4e6744; }
+.vs-sub { font-family: "Jost", sans-serif; font-size: 15px; font-weight: 300; fill: #626d5f; }
+@media (max-width: 900px) { .venster-grid { grid-template-columns: 1fr; gap: 28px; } .venster__fig { max-width: 520px; } }
