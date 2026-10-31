@@ -657,3 +657,17 @@ p { margin: 0 0 1.2em; }
   font-size: 1.95em;
   color: var(--ink);
 }
+
+/* Over mij: tussenkoppen en citaat */
+.about__kop { font-size: clamp(1.5rem, 2.6vw, 1.9rem); margin: 1.4em 0 0.4em; }
+.about__quote { margin: 1.6em 0 1.6em; padding-left: 18px; border-left: 3px solid var(--sage); font-family: var(--serif); font-style: italic; font-size: 1.5rem; color: var(--sage-dark); }
+
+/* Werkwijze: traject en venster */
+.traject { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
+.traject .nr { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--sage-light); color: var(--sage-dark); font-size: 0.95rem; margin-bottom: 10px; }
+.traject__noot, .venster__intro { max-width: 760px; color: var(--muted); margin-top: 22px; }
+.venster { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+.vak--rust { border: 2px solid var(--sage); }
+.vak--rust h3 { color: var(--sage-dark); }
+@media (max-width: 900px) { .traject { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .traject, .venster { grid-template-columns: 1fr; } }
