@@ -760,3 +760,7 @@ a.post:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 @media (max-width: 800px) { .praktisch { grid-template-columns: 1fr; } }
 .motto { background: var(--sand-light); color: var(--sand-dark); border-top: 1px solid #e6dccd; border-bottom: 1px solid #e6dccd; }
 .motto p::after { background: var(--sand); }
+
+/* Homepage: krachtige uitspraak boven de uitnodiging */
+.cta__quote { font-family: var(--serif); font-style: italic; font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.25; color: var(--sage-dark); margin: 0 auto 40px; max-width: 760px; }
+.cta__quote::after { content: ""; display: block; width: 64px; height: 1px; background: var(--sand); margin: 28px auto 0; }
