@@ -712,3 +712,7 @@ p { margin: 0 0 1.2em; }
 .btn-row--midden { justify-content: center; }
 /* Footer: ondernemingsnummer */
 .footer-sep { margin: 0 6px; }
+
+/* Contact: warme slotzin in de intro */
+.page-intro p + p { margin-top: 0.6em; }
+.page-intro .contact-warm { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.5rem; color: var(--sage-dark); margin-top: 0.8em; }
