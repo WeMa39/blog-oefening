@@ -604,11 +604,10 @@ p { margin: 0 0 1.2em; }
 .auteur__k { flex: 0 0 48px; height: 48px; border-radius: 50%; background: var(--sage-light); color: var(--sage-dark); display: grid; place-items: center; font-family: var(--serif); font-size: 1.4rem; }
 .auteur b { font-weight: 500; display: block; }
 .auteur span { font-size: 0.88rem; color: var(--muted); }
-.hulp { background: var(--ink); color: #fff; border-radius: var(--radius); padding: 32px; margin-top: 32px; }
-.hulp h2 { color: #fff; margin: 0 0 0.4em; }
-.hulp p { color: #dfe3da; }
-.hulp .btn { background: #fff; color: var(--ink); }
-.hulp .btn--ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.6); }
+.hulp { background: var(--sage-light); color: var(--ink); border: 1px solid #d3dcc4; border-left: 5px solid var(--sage); border-radius: var(--radius); padding: 32px; margin-top: 32px; }
+.hulp h2 { color: var(--sage-dark); margin: 0 0 0.4em; }
+.hulp p { color: var(--ink); }
+.hulp .btn--ghost { background: #fff; }
 .lees-ook { margin-top: 36px; }
 .lees-ook .vgl a { text-decoration: none; color: var(--ink); font-family: var(--serif); font-size: 1.3rem; transition: transform 0.2s, box-shadow 0.2s; }
 .lees-ook .vgl a:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
@@ -695,7 +694,7 @@ p { margin: 0 0 1.2em; }
 /* Homepagina: aanbod als labels, adres onder de knoppen */
 .hero__tags { list-style: none; padding: 0; margin: 4px 0 30px; display: flex; flex-wrap: wrap; gap: 8px; }
 .hero__tags li { background: var(--sage-light); color: var(--sage-dark); font-weight: 500; font-size: 0.95rem; letter-spacing: 0.01em; padding: 7px 15px; border-radius: 999px; }
-.hero__adres { display: flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 0.95rem; color: var(--muted); }
+.hero__adres { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 24px; font-size: 1.08rem; font-weight: 500; color: var(--ink); letter-spacing: 0.01em; }
 .hero__adres svg { color: var(--sage); flex: none; }
 
 /* Over mij: foto bovenaan naast de tekst */
