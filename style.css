@@ -705,3 +705,11 @@ p { margin: 0 0 1.2em; }
 @media (max-width: 900px) { .about .split__media { position: static; } }
 .about__quote--foto { margin: 28px 0 0; }
 .about .btn-row { margin-top: 32px; }
+
+/* Homepagina: knoppen gecentreerd onder de vier labels */
+.hero__acties { width: fit-content; max-width: 100%; }
+.hero__acties .btn-row { justify-content: center; }
+/* Voor wie: knoppen gecentreerd */
+.btn-row--midden { justify-content: center; }
+/* Footer: ondernemingsnummer */
+.footer-sep { margin: 0 6px; }
