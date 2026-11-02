@@ -729,3 +729,34 @@ p { margin: 0 0 1.2em; }
 a.post { text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; }
 a.post:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .post__lees { margin-top: 16px; font-weight: 500; color: var(--sage-dark); }
+
+/* ==========================================================
+   Neutrale kleur: warm zand (op vraag van Katleen: minder groen)
+   ========================================================== */
+:root {
+  --sand: #cdbca3;        /* warm zand */
+  --sand-light: #f3eee6;  /* heel licht zand */
+  --sand-dark: #7a6a56;   /* donker zand voor tekst */
+  --ink-warm: #3a3632;    /* warm donkergrijs voor de footer */
+}
+.section--tint { background: var(--sand-light); }
+.hero__tags li { background: var(--sand-light); color: var(--sand-dark); border: 1px solid #e6dccd; }
+.nav a[aria-current="page"] { background: var(--sand-light); color: var(--sand-dark); }
+.kort { background: var(--sand-light); }
+.kort .eyebrow { color: var(--sand-dark); }
+.contact-item .icon { background: var(--sand-light); }
+.contact-item .icon svg { stroke: var(--sand-dark); }
+.site-footer { background: var(--ink-warm); }
+.btn--ghost:hover { background: var(--sand-light); }
+
+/* Praktische info: duur, op afspraak, terugbetaling */
+.praktisch__kop { text-align: center; font-family: var(--serif); font-size: 1.6rem; font-weight: 500; margin: 48px 0 18px; }
+.praktisch { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 980px; margin: 0 auto; }
+.praktisch__item { display: flex; gap: 14px; align-items: flex-start; background: var(--surface); border: 1px solid #e6dccd; border-radius: var(--radius); padding: 18px 20px; }
+.praktisch__ico { flex: 0 0 42px; height: 42px; border-radius: 50%; background: var(--sand-light); color: var(--sand-dark); display: grid; place-items: center; }
+.praktisch__ico svg { width: 20px; height: 20px; }
+.praktisch__item b { display: block; font-weight: 500; line-height: 1.35; }
+.praktisch__item span { font-size: 0.92rem; color: var(--muted); line-height: 1.5; display: block; margin-top: 2px; }
+@media (max-width: 800px) { .praktisch { grid-template-columns: 1fr; } }
+.motto { background: var(--sand-light); color: var(--sand-dark); border-top: 1px solid #e6dccd; border-bottom: 1px solid #e6dccd; }
+.motto p::after { background: var(--sand); }
