@@ -764,3 +764,9 @@ a.post:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 /* Homepage: krachtige uitspraak boven de uitnodiging */
 .cta__quote { font-family: var(--serif); font-style: italic; font-size: clamp(1.9rem, 4vw, 2.8rem); line-height: 1.25; color: var(--sage-dark); margin: 0 auto 40px; max-width: 760px; }
 .cta__quote::after { content: ""; display: block; width: 64px; height: 1px; background: var(--sand); margin: 28px auto 0; }
+
+/* Werkwijze: foto van de praktijk naast "Hoe gaat dat in de praktijk?" */
+.praktijk-kop { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; margin-bottom: 36px; }
+.praktijk-kop p { color: var(--muted); max-width: 560px; }
+.praktijk-kop__img { width: 100%; max-width: 400px; justify-self: end; aspect-ratio: 4 / 3.6; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+@media (max-width: 800px) { .praktijk-kop { grid-template-columns: 1fr; gap: 24px; } .praktijk-kop__img { justify-self: start; max-width: 100%; } }
