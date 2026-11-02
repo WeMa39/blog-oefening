@@ -716,3 +716,16 @@ p { margin: 0 0 1.2em; }
 /* Contact: warme slotzin in de intro */
 .page-intro p + p { margin-top: 0.6em; }
 .page-intro .contact-warm { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.5rem; color: var(--sage-dark); margin-top: 0.8em; }
+
+/* ---------- Blogartikels (eigen pagina per blog) ---------- */
+.blogartikel .artikel__meta { font-size: 0.9rem; color: var(--muted); letter-spacing: 0.04em; margin: -0.2em 0 24px; }
+.artikel__img { width: 100%; border-radius: var(--radius); margin: 0 0 32px; aspect-ratio: 16 / 9; object-fit: cover; }
+.artikel__tekst h2 { font-size: clamp(1.6rem, 3vw, 2rem); margin: 1.6em 0 0.5em; }
+.artikel__tip { margin: 32px 0; }
+.artikel__tip p { margin: 0.3em 0 0; }
+.artikel__tekst blockquote { font-family: var(--serif); font-style: italic; font-size: 1.5rem; line-height: 1.4; color: var(--sage-dark); border-left: 3px solid var(--sage); margin: 36px 0; padding: 4px 0 4px 24px; }
+.artikel__terug { margin-top: 32px; }
+.artikel__terug a { text-decoration: none; font-weight: 500; }
+a.post { text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; }
+a.post:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.post__lees { margin-top: 16px; font-weight: 500; color: var(--sage-dark); }
