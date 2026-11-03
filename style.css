@@ -756,7 +756,7 @@ a.post:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .praktisch__ico { flex: 0 0 42px; height: 42px; border-radius: 50%; background: var(--sand-light); color: var(--sand-dark); display: grid; place-items: center; }
 .praktisch__ico svg { width: 20px; height: 20px; }
 .praktisch__item b { display: block; font-weight: 500; line-height: 1.35; }
-.praktisch__item span { font-size: 0.92rem; color: var(--muted); line-height: 1.5; display: block; margin-top: 2px; }
+.praktisch__item div span { font-size: 0.92rem; color: var(--muted); line-height: 1.5; display: block; margin-top: 2px; }
 @media (max-width: 800px) { .praktisch { grid-template-columns: 1fr; } }
 .motto { background: var(--sand-light); color: var(--sand-dark); border-top: 1px solid #e6dccd; border-bottom: 1px solid #e6dccd; }
 .motto p::after { background: var(--sand); }
