@@ -771,38 +771,7 @@ a.post:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .praktijk-kop__img { width: 100%; max-width: 400px; justify-self: end; aspect-ratio: 4 / 3.6; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
 @media (max-width: 800px) { .praktijk-kop { grid-template-columns: 1fr; gap: 24px; } .praktijk-kop__img { justify-self: start; max-width: 100%; } }
 
-/* ==========================================================
-   Werkwijze optie 2: interactief venster van verdraagzaamheid
-   ========================================================== */
-.vz { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 28px; }
-.vz-fig { margin: 0; position: sticky; top: 110px; }
-.vz-fig figcaption { margin-top: 12px; font-size: 0.92rem; color: var(--muted); text-align: center; font-style: italic; }
-.vz-zone { cursor: pointer; transition: opacity 0.3s; }
-.vz[data-actief] .vz-zone { opacity: 0.45; }
-.vz[data-actief] .vz-zone.is-actief { opacity: 1; }
-.vz-zone:hover { opacity: 0.85 !important; }
-.vz-zone.is-actief:hover { opacity: 1 !important; }
-.vz-knoppen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 18px; }
-.vz-knop { font: inherit; text-align: left; cursor: pointer; background: var(--surface); border: 2px solid var(--line); border-radius: var(--radius); padding: 12px 14px; color: var(--ink); line-height: 1.3; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
-.vz-knop b { display: block; font-weight: 500; font-size: 0.98rem; }
-.vz-knop span { display: block; font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
-.vz-knop:hover { transform: translateY(-1px); }
-.vz-knop:focus-visible { outline: 3px solid var(--sage); outline-offset: 2px; }
-.vz-knop--boven[aria-selected="true"] { background: #f7e3dc; border-color: #d9a796; }
-.vz-knop--in[aria-selected="true"] { background: var(--sage-light); border-color: var(--sage); }
-.vz-knop--onder[aria-selected="true"] { background: #e4e9ec; border-color: #9fb0b9; }
-.vz-panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 26px; animation: vzIn 0.35s ease; }
-.vz-panel--boven { border-top: 5px solid #d9a796; }
-.vz-panel--in { border-top: 5px solid var(--sage); }
-.vz-panel--onder { border-top: 5px solid #9fb0b9; }
-.vz-panel h3 { font-family: var(--serif); font-size: 1.7rem; font-weight: 500; margin: 0 0 0.2em; }
-.vz-panel > p { color: var(--muted); margin: 0 0 14px; }
-.vz-kolommen { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.vz-kolommen ul { margin: 6px 0 0; padding-left: 1.1em; font-size: 0.95rem; line-height: 1.6; }
-.vz-kolommen li { margin-bottom: 4px; }
-.vz-helpt { margin: 18px 0 0; padding-top: 14px; border-top: 1px solid var(--line); font-size: 0.95rem; }
-.vz-helpt b { font-weight: 500; color: var(--sage-dark); }
-@keyframes vzIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-@media (max-width: 900px) { .vz { grid-template-columns: 1fr; gap: 24px; } .vz-fig { position: static; max-width: 520px; } }
-@media (max-width: 520px) { .vz-knoppen { grid-template-columns: 1fr; } .vz-kolommen { grid-template-columns: 1fr; gap: 10px; } }
-@media (prefers-reduced-motion: reduce) { .vz-panel { animation: none; } }
+/* Ademhalingsoefening: echt audiofragment */
+.audio { flex-wrap: wrap; }
+.audio__tekst { flex: 1 1 220px; }
+.audio__speler { flex: 1 1 260px; width: 100%; max-width: 100%; height: 44px; }
