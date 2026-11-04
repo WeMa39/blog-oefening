@@ -145,13 +145,13 @@ p { margin: 0 0 1.2em; }
 
 /* ---------- Algemene secties ---------- */
 
-.section { padding: 88px 0; }
-.section--tight { padding: 56px 0; }
+.section { padding: 66px 0; }
+.section--tight { padding: 44px 0; }
 .section--tint { background: var(--sage-light); }
 .section--blush { background: var(--blush); }
 
 .page-intro {
-  padding: 80px 0 40px;
+  padding: 64px 0 28px;
   text-align: center;
 }
 .page-intro p {
@@ -777,4 +777,6 @@ a.post:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .audio__speler { flex: 1 1 260px; width: 100%; max-width: 100%; height: 44px; }
 
 /* Psychomotorische therapie: foto behandeltafel */
-.thema-foto { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 18%; border-radius: var(--radius); margin: 8px 0 32px; }
+.thema-split { display: grid; grid-template-columns: 1.25fr 1fr; gap: 36px; align-items: center; margin-bottom: 8px; }
+.thema-foto { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 30%; border-radius: var(--radius); }
+@media (max-width: 760px) { .thema-split { grid-template-columns: 1fr; gap: 20px; } .thema-foto { aspect-ratio: 4 / 3; object-position: center 22%; } }
